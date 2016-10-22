@@ -1,0 +1,80 @@
+[
+  {
+    "description": "Fail introspection for unexpected nodes",
+    "conditions": [
+      {
+        "op": "lt",
+        "field": "memory_mb",
+        "value": 4096
+      }
+    ],
+    "actions": [
+      {
+        "action": "fail",
+        "message": "Memory too low, expected at least 4 GiB"
+      }
+    ]
+  },
+  {
+    "description": "Assign possible profiles for compute",
+    "conditions": [
+      {
+        "op": "eq",
+        "field": "memory_mb",
+        "value": 131072
+      }
+    ],
+    "actions": [
+      {
+        "action": "set-capability",
+        "name": "profile",
+        "value": "control"
+      }
+    ]
+  },
+  {
+    "description": "Assign possible profiles for ceph",
+    "conditions": [
+      {
+        "op": "gt",
+        "field": "memory_mb",
+        "value": 131072
+      },
+      {
+        "op": "eq",
+        "field": "cpus",
+        "value": 40
+      }
+    ],
+    "actions": [
+      {
+        "action": "set-capability",
+        "name": "profile",
+        "value": "ceph-storage"
+      }
+    ]
+  },
+  {
+    "description": "Assign possible profiles for compute",
+    "conditions": [
+      {
+        "op": "gt",
+        "field": "memory_mb",
+        "value": 131072
+      },
+      {
+        "op": "eq",
+        "field": "cpus",
+        "value": 48
+      }
+    ],
+    "actions": [
+      {
+        "action": "set-capability",
+        "name": "profile",
+        "value": "compute"
+      }
+    ]
+  }
+]
+

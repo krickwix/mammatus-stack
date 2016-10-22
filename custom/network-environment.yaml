@@ -1,0 +1,26 @@
+resource_registry:
+  OS::TripleO::Compute::Net::SoftwareConfig: /home/stack/custom/nic-configs/compute.yaml
+  OS::TripleO::Controller::Net::SoftwareConfig: /home/stack/custom/nic-configs/controller.yaml
+  OS::TripleO::CephStorage::Net::SoftwareConfig: /home/stack/custom/nic-configs/ceph-storage.yaml
+parameter_defaults:
+  InternalApiNetCidr: 192.168.13.0/24
+  StorageNetCidr: 192.168.14.0/24
+  StorageMgmtNetCidr: 192.168.15.0/24
+  TenantNetCidr: 192.168.110.0/24
+  ExternalNetCidr: 10.60.18.0/24
+  DnsServers: ["144.254.71.184","173.38.200.100"]
+  ControlPlaneDefaultRoute: 172.16.1.1
+  ControlPlaneSubnetCidr: "24"
+  EC2MetadataIp: 172.16.1.1
+  InternalApiAllocationPools: [{'start': '192.168.13.10', 'end': '192.168.13.200'}]
+  StorageAllocationPools: [{'start': '192.168.14.10', 'end': '192.168.14.200'}]
+  StorageMgmtAllocationPools: [{'start': '192.168.15.10', 'end': '192.168.15.200'}]
+  TenantAllocationPools: [{'start': '192.168.110.10', 'end': '192.168.110.200'}]
+  ExternalAllocationPools: [{'start': '10.60.18.2', 'end': '10.60.18.20'}]
+  ExternalNetworkVlanID: 18
+  InternalApiNetworkVlanID: 3
+  StorageNetworkVlanID: 4
+  StorageMgmtNetworkVlanID: 5
+  TenantNetworkVlanID: 100
+  ExternalInterfaceDefaultRoute: 10.60.18.254
+  NeutronExternalNetworkBridge: 'br-ex'
