@@ -1,0 +1,12 @@
+.*
+*~
+images
+debug
+*.img
+poprc*
+*.sqlite
+overcloud-env.json
+stackrc
+tempest-deployer-input.conf
+undercloud-passwords.conf
+

@@ -1,0 +1,107 @@
+resource_registry:
+  OS::TripleO::NodeUserData: /home/stack/templates/firstboot/wipe-disks.yaml
+  OS::TripleO::CephStorageExtraConfigPre: /usr/share/openstack-tripleo-heat-templates/puppet/extraconfig/pre_deploy/per_node.yaml
+
+parameter_defaults:
+  CephPools:
+    vms:
+      size: 2
+      pg_num: 128
+      pgp_num: 128
+    images:
+      size: 2
+    volumes:
+      size: 2
+  ExtraConfig:
+    ceph::profile::params::osd_journal_size: 10240
+  NodeDataLookup: >
+      {
+        "38CDD1CA-331B-E511-4210-00000000002A": {
+          "ceph::profile::params::osds": {
+            "/dev/sdh": { "journal": "/dev/sde" },
+            "/dev/sdg": { "journal": "/dev/sde" },
+            "/dev/sdf": { "journal": "/dev/sde" },
+            "/dev/sdd": { "journal": "/dev/sde" },
+            "/dev/sdc": { "journal": "/dev/sde" },
+            "/dev/sdb": { "journal": "/dev/sde" },
+            "/dev/sda": { "journal": "/dev/sde" }
+          }
+        },
+        "38CDD1CA-331B-E511-4210-000000000021": {
+          "ceph::profile::params::osds": {
+            "/dev/sdh": { "journal": "/dev/sde" },
+            "/dev/sdg": { "journal": "/dev/sde" },
+            "/dev/sdf": { "journal": "/dev/sde" },
+            "/dev/sdd": { "journal": "/dev/sde" },
+            "/dev/sdc": { "journal": "/dev/sde" },
+            "/dev/sdb": { "journal": "/dev/sde" },
+            "/dev/sda": { "journal": "/dev/sde" }
+          }
+        },
+        "38CDD1CA-331B-E511-4210-00000000001F": {
+          "ceph::profile::params::osds": {
+            "/dev/sdh": { "journal": "/dev/sde" },
+            "/dev/sdg": { "journal": "/dev/sde" },
+            "/dev/sdf": { "journal": "/dev/sde" },
+            "/dev/sdd": { "journal": "/dev/sde" },
+            "/dev/sdc": { "journal": "/dev/sde" },
+            "/dev/sdb": { "journal": "/dev/sde" },
+            "/dev/sda": { "journal": "/dev/sde" }
+          }
+        },
+        "38CDD1CA-331B-E511-4210-00000000001E": {
+          "ceph::profile::params::osds": {
+            "/dev/sdh": { "journal": "/dev/sde" },
+            "/dev/sdg": { "journal": "/dev/sde" },
+            "/dev/sdf": { "journal": "/dev/sde" },
+            "/dev/sdd": { "journal": "/dev/sde" },
+            "/dev/sdc": { "journal": "/dev/sde" },
+            "/dev/sdb": { "journal": "/dev/sde" },
+            "/dev/sda": { "journal": "/dev/sde" }
+          }
+        },
+        "38CDD1CA-331B-E511-4210-00000000001D": {
+          "ceph::profile::params::osds": {
+            "/dev/sdg": { "journal": "/dev/sdh" },
+            "/dev/sdf": { "journal": "/dev/sdh" },
+            "/dev/sde": { "journal": "/dev/sdh" },
+            "/dev/sdd": { "journal": "/dev/sdh" },
+            "/dev/sdc": { "journal": "/dev/sdh" },
+            "/dev/sdb": { "journal": "/dev/sdh" },
+            "/dev/sda": { "journal": "/dev/sdh" }
+          }
+        },
+        "38CDD1CA-331B-E511-4210-00000000001C": {
+          "ceph::profile::params::osds": {
+            "/dev/sdg": { "journal": "/dev/sdh" },
+            "/dev/sdf": { "journal": "/dev/sdh" },
+            "/dev/sde": { "journal": "/dev/sdh" },
+            "/dev/sdd": { "journal": "/dev/sdh" },
+            "/dev/sdc": { "journal": "/dev/sdh" },
+            "/dev/sdb": { "journal": "/dev/sdh" },
+            "/dev/sda": { "journal": "/dev/sdh" }
+          }
+        },
+        "38CDD1CA-331B-E511-4210-00000000001B": {
+          "ceph::profile::params::osds": {
+            "/dev/sdg": { "journal": "/dev/sdh" },
+            "/dev/sdf": { "journal": "/dev/sdh" },
+            "/dev/sde": { "journal": "/dev/sdh" },
+            "/dev/sdd": { "journal": "/dev/sdh" },
+            "/dev/sdc": { "journal": "/dev/sdh" },
+            "/dev/sdb": { "journal": "/dev/sdh" },
+            "/dev/sda": { "journal": "/dev/sdh" }
+          }
+        },
+        "38CDD1CA-331B-E511-4210-00000000001A": {
+          "ceph::profile::params::osds": {
+            "/dev/sdg": { "journal": "/dev/sdh" },
+            "/dev/sdf": { "journal": "/dev/sdh" },
+            "/dev/sde": { "journal": "/dev/sdh" },
+            "/dev/sdd": { "journal": "/dev/sdh" },
+            "/dev/sdc": { "journal": "/dev/sdh" },
+            "/dev/sdb": { "journal": "/dev/sdh" },
+            "/dev/sda": { "journal": "/dev/sdh" }
+          }
+        }
+      }
