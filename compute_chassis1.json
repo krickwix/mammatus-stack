@@ -1,0 +1,18 @@
+{
+    "nodes":[
+        {
+	    "name":"PIRL-OS-COMP35",
+            "mac":[
+                "00:25:b5:42:00:f1"
+            ],
+            "cpu":"4",
+            "memory":"6144",
+            "disk":"40",
+            "arch":"x86_64",
+            "pm_type":"pxe_ipmitool",
+            "pm_user":"admin",
+            "pm_password":"pirladmin",
+            "pm_addr":"10.60.6.59"
+        }
+    ]
+}
