@@ -1,0 +1,32 @@
+[compute]
+pop-compute-8 ansible_host=192.168.24.25 ansible_user=heat-admin ansible_become=yes
+pop-compute-4 ansible_host=192.168.24.7 ansible_user=heat-admin ansible_become=yes
+pop-compute-7 ansible_host=192.168.24.21 ansible_user=heat-admin ansible_become=yes
+pop-compute-13 ansible_host=192.168.24.37 ansible_user=heat-admin ansible_become=yes
+pop-compute-5 ansible_host=192.168.24.34 ansible_user=heat-admin ansible_become=yes
+pop-compute-1 ansible_host=192.168.24.24 ansible_user=heat-admin ansible_become=yes
+pop-compute-9 ansible_host=192.168.24.26 ansible_user=heat-admin ansible_become=yes
+pop-compute-12 ansible_host=192.168.24.31 ansible_user=heat-admin ansible_become=yes
+pop-compute-14 ansible_host=192.168.24.28 ansible_user=heat-admin ansible_become=yes
+pop-compute-11 ansible_host=192.168.24.9 ansible_user=heat-admin ansible_become=yes
+pop-compute-6 ansible_host=192.168.24.6 ansible_user=heat-admin ansible_become=yes
+pop-compute-3 ansible_host=192.168.24.22 ansible_user=heat-admin ansible_become=yes
+pop-compute-10 ansible_host=192.168.24.20 ansible_user=heat-admin ansible_become=yes
+pop-compute-2 ansible_host=192.168.24.8 ansible_user=heat-admin ansible_become=yes
+pop-compute-0 ansible_host=192.168.24.16 ansible_user=heat-admin ansible_become=yes
+
+[control]
+pop-controller-2 ansible_host=192.168.24.12 ansible_user=heat-admin ansible_become=yes
+pop-controller-0 ansible_host=192.168.24.13 ansible_user=heat-admin ansible_become=yes
+pop-controller-1 ansible_host=192.168.24.17 ansible_user=heat-admin ansible_become=yes
+
+[ceph]
+pop-cephstorage-2 ansible_host=192.168.24.33 ansible_user=heat-admin ansible_become=yes
+pop-cephstorage-7 ansible_host=192.168.24.30 ansible_user=heat-admin ansible_become=yes
+pop-cephstorage-6 ansible_host=192.168.24.27 ansible_user=heat-admin ansible_become=yes
+pop-cephstorage-1 ansible_host=192.168.24.19 ansible_user=heat-admin ansible_become=yes
+pop-cephstorage-3 ansible_host=192.168.24.15 ansible_user=heat-admin ansible_become=yes
+pop-cephstorage-5 ansible_host=192.168.24.10 ansible_user=heat-admin ansible_become=yes
+pop-cephstorage-4 ansible_host=192.168.24.23 ansible_user=heat-admin ansible_become=yes
+pop-cephstorage-0 ansible_host=192.168.24.14 ansible_user=heat-admin ansible_become=yes
+ 
